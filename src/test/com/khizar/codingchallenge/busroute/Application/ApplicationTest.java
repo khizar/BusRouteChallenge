@@ -21,7 +21,7 @@ public class ApplicationTest {
 
     @BeforeClass
     public static void beforeClass() {
-        Application.main(new String[] {"test/data/test-data.txt"});
+        Application.main(new String[] {"src/test/data/test-data.txt"});
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {

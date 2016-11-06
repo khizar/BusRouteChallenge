@@ -22,7 +22,7 @@ public class BusRouteServiceTest {
         assertNull(busRoutes);
 
         //Initialized
-        routeService.initializeRoutes("test/data/test-data.txt");
+        routeService.initializeRoutes("src/test/data/test-data.txt");
         busRoutes = routeService.getBusRoutes();
 
         assertTrue(busRoutes.size() == 3);
@@ -44,7 +44,7 @@ public class BusRouteServiceTest {
         assertFalse(routeService.isDirectRouteAvailable(null, null));
 
 
-        routeService.initializeRoutes("test/data/test-data.txt");
+        routeService.initializeRoutes("src/test/data/test-data.txt");
 
         //wrong inputs after init
         assertFalse(routeService.isDirectRouteAvailable(null, 2));
