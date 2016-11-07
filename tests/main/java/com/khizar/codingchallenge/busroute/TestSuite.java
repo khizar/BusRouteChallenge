@@ -1,7 +1,8 @@
-package com.khizar.codingchallenge.busroute;
+package main.java.com.khizar.codingchallenge.busroute;
 
-import com.khizar.codingchallenge.busroute.Application.ApplicationTest;
-import com.khizar.codingchallenge.busroute.service.BusRouteServiceTest;
+import main.java.com.khizar.codingchallenge.busroute.Application.ApplicationTest;
+import main.java.com.khizar.codingchallenge.busroute.Utils.BusRouteWatcherTest;
+import main.java.com.khizar.codingchallenge.busroute.service.BusRouteServiceTest;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
@@ -12,7 +13,7 @@ import org.junit.runners.Suite;
 
 
 
-@Suite.SuiteClasses({BusRouteServiceTest.class, ApplicationTest.class})
+@Suite.SuiteClasses({BusRouteWatcherTest.class, BusRouteServiceTest.class, ApplicationTest.class})
 @RunWith(Suite.class)
 public class TestSuite {
 }

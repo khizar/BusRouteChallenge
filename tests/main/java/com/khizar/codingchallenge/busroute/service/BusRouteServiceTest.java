@@ -1,5 +1,6 @@
-package com.khizar.codingchallenge.busroute.service;
+package main.java.com.khizar.codingchallenge.busroute.service;
 
+import com.khizar.codingchallenge.busroute.service.BusRouteService;
 import org.junit.Test;
 
 import java.util.LinkedHashSet;

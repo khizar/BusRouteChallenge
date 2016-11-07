@@ -23,12 +23,12 @@ public class BusRouteWatcher extends Thread {
     private boolean isStopped() {
         return stop.get();
     }
-
+    
     public void stopThread() {
         stop.set(true);
     }
 
-    private void doOnChange() {
+    protected void doOnChange() {
         System.out.println("File changed. Reloading routes");
         routeService.initializeRoutes(file.getPath());
 
@@ -63,9 +63,9 @@ public class BusRouteWatcher extends Thread {
                         continue;
                     } else if (kind == StandardWatchEventKinds.ENTRY_MODIFY
                             && filename.toString().equals(file.getName())) {
-                        //Assuming that no other file in directory
-                        //not checking file name: problems with text editors
-                        //some editors make a new copy instead of modifying. User vim please ;p
+                        //Shitty watcher, problems with text editors.
+                        //
+                        //some editors make a new copy instead of modifying. {Use vim please ;p}
                         Thread.sleep(1000);
                         doOnChange();
                     }

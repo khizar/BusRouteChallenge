@@ -1,6 +1,7 @@
-package com.khizar.codingchallenge.busroute.Application;
+package main.java.com.khizar.codingchallenge.busroute.Application;
 
 import com.google.gson.Gson;
+import com.khizar.codingchallenge.busroute.Application.Application;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
