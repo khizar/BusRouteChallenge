@@ -6,6 +6,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import spark.Spark;
 import spark.utils.IOUtils;
+
 import static org.junit.Assert.*;
 
 import java.io.IOException;
@@ -14,6 +15,8 @@ import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
+
+
 /**
  * Created by khizar on 06.11.16.
  */
@@ -21,7 +24,7 @@ public class ApplicationTest {
 
     @BeforeClass
     public static void beforeClass() {
-        Application.main(new String[] {"src/test/data/test-data.txt"});
+        Application.main(new String []{"src/test/data/test-data.txt"});
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
@@ -81,7 +84,8 @@ public class ApplicationTest {
             this.body = body;
         }
 
-        public Map<String,String> json() {
+        @SuppressWarnings("unchecked")
+        public Map<String, String> json() {
             return new Gson().fromJson(body, HashMap.class);
         }
     }
