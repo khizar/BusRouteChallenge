@@ -53,6 +53,7 @@ public class BusRouteServiceTest {
 
         assertTrue(routeService.isDirectRouteAvailable(3, 6));
         assertFalse(routeService.isDirectRouteAvailable(280, 123));
+        assertTrue(routeService.isDirectRouteAvailable(5 , 5));
 
     }
 }
