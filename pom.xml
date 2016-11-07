@@ -69,7 +69,7 @@
                 </configuration>
             </plugin>
         </plugins>
-        <testSourceDirectory>src/test</testSourceDirectory>
+        <testSourceDirectory>tests</testSourceDirectory>
     </build>
 
     <dependencies>
